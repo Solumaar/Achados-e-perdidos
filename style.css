@@ -1,7 +1,18 @@
-.playfair-display-<uniquifier> {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
+:root {
+    --verde-principal: #08783e;
+    --verde-escuro: #064b2e;
+    --verde-profundo: #033821;
+    --verde-claro: #e8f5ec;
+    --verde-destaque: #a5cf45;
 
+    --branco: #ffffff;
+    --fundo: #f5f8f6;
+    --cinza-claro: #e5ebe7;
+    --cinza: #64746b;
+    --texto: #24352b;
+
+    --sombra: 0 5px 20px rgba(4, 65, 38, 0.08);
+    --sombra-hover: 0 12px 28px rgba(4, 65, 38, 0.15);
+
+    --raio: 16px;
+}

@@ -1,93 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
 
+<head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Achados e perdidos</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
+    
+    <header>
+        <div class="bg-ifpe-950 text-slate-300 text-xs py-1.5 border-b border-ifpe-900">
 
-    <img src="https://iconape.com/wp-content/files/rl/195720/png/ifpe-instituto-federal-de-pernambuco-logo.png" alt="Logo do site" width="80" height="80">
-    <h1>IFPE</h1>
- 
+            <span class="inline-block w-2 h-2 rounded-full bg-ifpe-500 animate-pulse"></span>
+            <span>Portal Oficial de Utilidade Comunitária — <strong class="text-white font-medium">Instituto Federal de
+                    Pernambuco</strong></span>
+        </div>
+        <div class="flex items-center gap-4">
+
+            <span class="hidden sm:inline">Atendimento: 08h às 21h</span>
+        </div>
+
+        <img src="https://iconape.com/wp-content/files/rl/195720/png/ifpe-instituto-federal-de-pernambuco-logo.png"
+            alt="Logo do site" width="80" height="80">
+        <h1>Achados e Perdidos</h1>
+
+    </header>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="perdidos.html">Itens Perdidos</a></li>
-                <li><a href="add.html">Adicionar item</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><button><a href="index.html">Página inicial</a></button></li>
+                <li><button><a href="perdidos.html">Itens Perdidos</a></button></li>
+                <li><button><a href="add.html">Adicionar item</a></button></li>
+                <li><button><a href="achados.html">Login</a></button></li>
+                <li><button><a href="cadastro.html">Cadastro</a></button></li>
 
             </ul>
         </nav>
     </header>
+    <div class="bg-ifpe-950 text-slate-300 text-xs py-1.5 border-b border-ifpe-900">
+        <span> Plataforma para o Registro de Itens Achados e Perdidos do IFPE </span>
+    </div>
+
+    <div class="bg-white p-2 rounded-2xl shadow-xl max-w-2xl mx-auto flex flex-col sm:flex-row gap-2">
+        <div class="relative flex-1 flex items-center">
+            <i data-lucide="search" class="w-5 h-5 text-slate-400 ml-3.5 shrink-0"></i>
+            <input type="text" id="search-input" oninput="filterItems()" placeholder="faça sua busca aqui"
+                class="w-full px-3.5 py-3 text-slate-800 placeholder-slate-400 text-sm sm:text-base focus:outline-none bg-transparent"
+                aria-label="Pesquisar">
+        </div>
+        <a href="#itens-perdidos"
+            class="px-6 py-3 rounded-xl bg-ifpe-600 hover:bg-ifpe-700 text-white font-semibold text-sm sm:text-base transition-colors flex items-center justify-center gap-2 shrink-0">
+            <span>Buscar Objeto</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+        </a>
+    </div>
 
     <main>
+
         <h2>Itens Perdidos</h2>
         <p>Aqui você pode encontrar objetos perdidos ou cadastrar objetos que foram encontrados.</p>
-</main>
 
-        <ul>
 
-<article>
-            <li>
 
-                <h4>Caderno hello kit</h4>
+        <article class="itens-perdidos">
+            <ul>
 
-                <a href="DetalhesdoProduto.html#callofduty">
-                <img src="IMG/img1.jpg" alt="Caderno Hello Kit" width="150"> </a>
-                <p>Caderno com capa de Hello Kitty, sem nome do dono(a)</p>
+                <li>
 
-             <p>
-                    <a href="DetalhesdoProduto.html#needforspeed"> mais detalhes </a>
-                </p>
-            </li>
+                    <p>Caderno hello kit</p>
 
-            <li>
+                    <a href="DetalhesdoProduto.html#callofduty">
+                        <img src="../Achados-e-perdidos/imagens/helloKit.jpeg" alt="Caderno Hello Kit" width="150"> </a>
+                    <p>Caderno com capa de Hello Kitty, sem nome do dono(a), achado no laboratório na
+                        segunda-feira...
+                    </p>
 
-                <h4>Guarda-Chuva</h4>
-                
-                <a href="DetalhesdoProduto.html#guitarhero">
-                <img src="IMG/img2.jpg" alt="Guarda-Chuva" width="150">
+                    <p>
+                        <a href="DetalhesdoProduto.html#needforspeed"> mais detalhes </a>
+                    </p>
+                </li>
 
-                </a>
+                <li>
 
-                <p>Proteja-se da chuva com este elegante guarda-chuva...</p>
-             <p>
-                    <a href="DetalhesdoProduto.html#needforspeed"> mais detalhes </a>
-                </p>
+                    <p>Guarda-Chuva</p>
 
-            </li>
+                    <a href="..">
+                        <img src="../Achados-e-perdidos/imagens/guardachuvinhas.jpeg" alt="Guarda-Chuva" width="150">
 
-            <li>
+                    </a>
 
-                <h4>livro</h4>
+                    <p>Guarda-chuvas achado na biblioteca pela tarde da quinta-feira no armário 11, sem
+                        identificação...
+                    </p>
+                    <p>
+                        <a href="DetalhesdoProduto.html#needforspeed"> mais detalhes </a>
+                    </p>
 
-                <a href="DetalhesdoProduto.html#needforspeed">
-                <img src="IMG/img3.jpg" alt="Vermelho Sangue e Sangue Azul" width="150">
-                
+                </li>
 
-                </a>
+                <li>
 
-                <p>Uma história emocionante sobre amor e identidade...</p>
+                    <p>livro</p>
 
-                <p>
-                    <a href="DetalhesdoProduto.html#needforspeed"> mais detalhes </a>
-                </p>
-            </li>
+                    <a href="DetalhesdoProduto.html#needforspeed">
+                        <img src="../Achados-e-perdidos/imagens/livro.jpeg" alt="Vermelho Sangue e Sangue Azul"
+                            width="150">
 
-</article>
-<br>
-<footer>
-        <p>© 2024 Loja Online. Todos os direitos reservados.</p>
+
+                    </a>
+
+                    <p>Livro com uma dedicatoria na primeira página "Feliz aniversário bibi", achado na entrada
+                        do
+                        campus hoje pela manhã...</p>
+
+                    <p>
+                        <a href="DetalhesdoProduto.html#needforspeed"> mais detalhes </a>
+                    </p>
+                </li>
+            </ul>
+        </article>
+        <div>
+            <p> Procedimento para reportar itens perdidos ou retirada</p>
+            <h3>Localização dos Itens</h3>
+            <ul>O usuário deve preencher o formulário de cadastro e logo em seguida reportar itens perdido,
+                fornecendo informações
+                detalhadas sobre o item, como descrição, local e data em que foi perdido. Se o produto estiver
+                postado, o usuário será notificado ou solicitado retirada.</ul>
+        </div>
+        <div>
+            <h3>Cadastro por email</h3>
+            <ul>O cadastro deve ser feito via email educacional, deve conter informações como nome, matrícula e
+                curso.</ul>
+        </div>
+        <div>
+            <h3>Achado</h3>
+            <ul>
+                Ao se cadastrar com seu email educacional, o usuário poderá acessar o sistema e reportar itens
+                achados, deve fornecer informações detalhadas sobre o item, como descrição, local e data em que foi
+                achado.
+            </ul>
+        </div>
+
+
+    </main>
+    <footer>
+
+        <p>Site desenvolvido para a disciplina de Programação Web - Achados e Perdidos do IFPE CAMPUS
+            JABOATÃO
+            DOS GUARARAPES</p>
+
+
     </footer>
 </body>
+
 </html>
